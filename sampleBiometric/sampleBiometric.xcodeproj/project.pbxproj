@@ -13,6 +13,7 @@
 		7A0088782C577671007300D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0088762C577671007300D5 /* Main.storyboard */; };
 		7A00887A2C577675007300D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0088792C577675007300D5 /* Assets.xcassets */; };
 		7A00887D2C577675007300D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A00887B2C577675007300D5 /* LaunchScreen.storyboard */; };
+		7A21D0F72C63602500A41F1D /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21D0F62C63602500A41F1D /* TextFieldViewController.swift */; };
 		7ABF25872C59FAB40019725C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF25862C59FAB40019725C /* LoginViewController.swift */; };
 		7ABF258A2C59FDD50019725C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF25892C59FDD50019725C /* Authentication.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		7A0088792C577675007300D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A00887C2C577675007300D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A00887E2C577675007300D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A21D0F62C63602500A41F1D /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		7ABF25862C59FAB40019725C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7ABF25892C59FDD50019725C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7ABF25862C59FAB40019725C /* LoginViewController.swift */,
+				7A21D0F62C63602500A41F1D /* TextFieldViewController.swift */,
 			);
 			path = Viewcontrooler;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				7ABF25872C59FAB40019725C /* LoginViewController.swift in Sources */,
 				7A0088752C577671007300D5 /* ViewController.swift in Sources */,
+				7A21D0F72C63602500A41F1D /* TextFieldViewController.swift in Sources */,
 				7A0088712C577671007300D5 /* AppDelegate.swift in Sources */,
 				7ABF258A2C59FDD50019725C /* Authentication.swift in Sources */,
 				7A0088732C577671007300D5 /* SceneDelegate.swift in Sources */,
@@ -314,8 +318,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6WUSYJ6NKR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sampleBiometric/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,13 +330,16 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Shem-Ramirez.sampleBiometric";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.mobileit.adp.ToretoreFX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MitAdpWildCard_Dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,8 +351,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6WUSYJ6NKR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sampleBiometric/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -350,13 +363,16 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Shem-Ramirez.sampleBiometric";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.mobileit.adp.ToretoreFX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MitAdpWildCard_Dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
