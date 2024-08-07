@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     let localAuthentication = Authentication()
 
-    @IBOutlet weak var authenticationImg: UIImageView!
+    @IBOutlet weak var authenticationBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,9 +19,9 @@ class ViewController: UIViewController {
         if localAuthentication.canEvaluateAuthentication() {
             switch localAuthentication.getAuthenticationType() {
             case .faceID:
-                authenticationImg.image = UIImage(systemName: "faceid")
+                authenticationBtn.imageView?.image = UIImage(systemName: "faceid")
             case .touchID:
-                authenticationImg.image = UIImage(systemName: "touchid")
+                authenticationBtn.imageView?.image = UIImage(systemName: "touchid")
             default:
                 redirectToLogin()
                 

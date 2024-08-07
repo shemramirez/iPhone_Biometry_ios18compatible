@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s27-AT-IGd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s27-AT-IGd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,24 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4yz-2m-NqO">
-                                <rect key="frame" x="146.66666666666666" y="410.66666666666669" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="9XQ-WU-JHw"/>
-                                    <constraint firstAttribute="height" constant="100" id="M4s-YY-0Wh"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bv-yd-uFx">
+                                <rect key="frame" x="147.33333333333334" y="418" width="98.333333333333343" height="85"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4yz-2m-NqO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5yB-EP-mv1"/>
-                            <constraint firstItem="4yz-2m-NqO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="efL-rs-8h4"/>
+                            <constraint firstItem="6bv-yd-uFx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Lmp-E3-SWj"/>
+                            <constraint firstItem="6bv-yd-uFx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OCH-OQ-PfV"/>
+                            <constraint firstItem="6bv-yd-uFx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="esH-Xt-ZWh"/>
+                            <constraint firstItem="6bv-yd-uFx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="kfF-dQ-yzK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LrA-cU-lCS"/>
                     <connections>
-                        <outlet property="authenticationImg" destination="4yz-2m-NqO" id="8Gy-z8-Nl3"/>
+                        <outlet property="authenticationBtn" destination="6bv-yd-uFx" id="CoE-qd-IrA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,7 +126,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
