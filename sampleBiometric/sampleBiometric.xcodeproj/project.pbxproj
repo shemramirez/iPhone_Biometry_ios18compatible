@@ -14,6 +14,8 @@
 		7A00887A2C577675007300D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0088792C577675007300D5 /* Assets.xcassets */; };
 		7A00887D2C577675007300D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A00887B2C577675007300D5 /* LaunchScreen.storyboard */; };
 		7A21D0F72C63602500A41F1D /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21D0F62C63602500A41F1D /* TextFieldViewController.swift */; };
+		7A21D0FA2C636FA100A41F1D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21D0F92C636FA100A41F1D /* StartViewController.swift */; };
+		7A21D0FC2C636FFC00A41F1D /* UserSaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21D0FB2C636FFC00A41F1D /* UserSaveData.swift */; };
 		7ABF25872C59FAB40019725C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF25862C59FAB40019725C /* LoginViewController.swift */; };
 		7ABF258A2C59FDD50019725C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF25892C59FDD50019725C /* Authentication.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		7A00887C2C577675007300D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A00887E2C577675007300D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A21D0F62C63602500A41F1D /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		7A21D0F92C636FA100A41F1D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		7A21D0FB2C636FFC00A41F1D /* UserSaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaveData.swift; sourceTree = "<group>"; };
 		7ABF25862C59FAB40019725C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7ABF25892C59FDD50019725C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				7ABF25882C59FDBF0019725C /* Biometrics */,
-				7ABF25852C59FA8E0019725C /* Viewcontrooler */,
+				7ABF25852C59FA8E0019725C /* ViewController */,
+				7A21D0F82C6364A300A41F1D /* Utilities */,
 				7A0088702C577671007300D5 /* AppDelegate.swift */,
 				7A0088722C577671007300D5 /* SceneDelegate.swift */,
 				7A0088742C577671007300D5 /* ViewController.swift */,
@@ -75,13 +80,30 @@
 			path = sampleBiometric;
 			sourceTree = "<group>";
 		};
-		7ABF25852C59FA8E0019725C /* Viewcontrooler */ = {
+		7A21D0F82C6364A300A41F1D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				7ABF25862C59FAB40019725C /* LoginViewController.swift */,
+				7A21D0FB2C636FFC00A41F1D /* UserSaveData.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7A21D0FD2C63716100A41F1D /* Common */ = {
+			isa = PBXGroup;
+			children = (
 				7A21D0F62C63602500A41F1D /* TextFieldViewController.swift */,
 			);
-			path = Viewcontrooler;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7ABF25852C59FA8E0019725C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7A21D0FD2C63716100A41F1D /* Common */,
+				7ABF25862C59FAB40019725C /* LoginViewController.swift */,
+				7A21D0F92C636FA100A41F1D /* StartViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		7ABF25882C59FDBF0019725C /* Biometrics */ = {
@@ -164,9 +186,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ABF25872C59FAB40019725C /* LoginViewController.swift in Sources */,
+				7A21D0FA2C636FA100A41F1D /* StartViewController.swift in Sources */,
 				7A0088752C577671007300D5 /* ViewController.swift in Sources */,
 				7A21D0F72C63602500A41F1D /* TextFieldViewController.swift in Sources */,
 				7A0088712C577671007300D5 /* AppDelegate.swift in Sources */,
+				7A21D0FC2C636FFC00A41F1D /* UserSaveData.swift in Sources */,
 				7ABF258A2C59FDD50019725C /* Authentication.swift in Sources */,
 				7A0088732C577671007300D5 /* SceneDelegate.swift in Sources */,
 			);

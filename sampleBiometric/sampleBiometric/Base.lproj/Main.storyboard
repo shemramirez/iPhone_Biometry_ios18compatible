@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s27-AT-IGd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,12 +22,21 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1T-Oq-8U9">
+                                <rect key="frame" x="147.33333333333334" y="397" width="98.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="I1T-Oq-8U9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="B76-WP-Idb"/>
+                            <constraint firstItem="I1T-Oq-8U9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DA0-m8-Oef"/>
                             <constraint firstItem="6bv-yd-uFx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Lmp-E3-SWj"/>
                             <constraint firstItem="6bv-yd-uFx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OCH-OQ-PfV"/>
+                            <constraint firstItem="6bv-yd-uFx" firstAttribute="top" secondItem="I1T-Oq-8U9" secondAttribute="bottom" id="Qth-Vm-EMt"/>
                             <constraint firstItem="6bv-yd-uFx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="esH-Xt-ZWh"/>
                             <constraint firstItem="6bv-yd-uFx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="kfF-dQ-yzK"/>
                         </constraints>
@@ -60,7 +70,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5w-mu-guH">
                                         <rect key="frame" x="0.0" y="37.666666666666657" width="275" height="37.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
                                         <connections>
                                             <outlet property="delegate" destination="xov-4d-lMW" id="m3R-IW-u7a"/>
                                         </connections>
@@ -71,10 +81,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJT-on-2MW">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FJT-on-2MW">
                                         <rect key="frame" x="0.0" y="112.66666666666664" width="275" height="37.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         <connections>
                                             <outlet property="delegate" destination="xov-4d-lMW" id="tK0-8k-z38"/>
                                         </connections>
@@ -90,6 +100,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <connections>
+                                    <action selector="onClickLoginBtn:" destination="xov-4d-lMW" eventType="touchUpInside" id="a66-y5-hdc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HQL-DN-nth"/>
@@ -103,10 +116,42 @@
                             <constraint firstItem="ohL-ZZ-C4e" firstAttribute="centerY" secondItem="HQL-DN-nth" secondAttribute="centerY" id="vsl-re-zUz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="FJT-on-2MW" id="Zne-FS-z8o"/>
+                        <outlet property="usernameTextField" destination="e5w-mu-guH" id="2R2-4X-6Yr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWm-DE-y9Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2588.5496183206105" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Upz-hN-LCC">
+            <objects>
+                <viewController id="Fjk-BL-ML5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9l7-i9-QeI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-cL-5ZE">
+                                <rect key="frame" x="147.33333333333334" y="396" width="98.333333333333343" height="85"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZm-v6-gA0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z2D-cL-5ZE" firstAttribute="width" secondItem="9l7-i9-QeI" secondAttribute="width" multiplier="0.25" id="cg4-gg-v4E"/>
+                            <constraint firstItem="Z2D-cL-5ZE" firstAttribute="centerY" secondItem="KZm-v6-gA0" secondAttribute="centerY" id="gIE-4m-MCD"/>
+                            <constraint firstItem="Z2D-cL-5ZE" firstAttribute="centerX" secondItem="KZm-v6-gA0" secondAttribute="centerX" id="pPH-ds-UkD"/>
+                            <constraint firstItem="Z2D-cL-5ZE" firstAttribute="height" secondItem="9l7-i9-QeI" secondAttribute="height" multiplier="0.1" id="sOH-DP-THq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCG-9e-gY9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tvm-Qc-Lom">

@@ -14,10 +14,9 @@ struct AssociatedKeys {
 }
 
 class TextFieldViewController: UIViewController {
-
 }
 
-
+// MARK: Text Field Delegate - TextField Configuration
 extension TextFieldViewController: UITextFieldDelegate {
     
     private(set) var activeTextField: UITextField? {
@@ -28,7 +27,6 @@ extension TextFieldViewController: UITextFieldDelegate {
             objc_setAssociatedObject(self, &AssociatedKeys.activeTextField, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
     
     private(set) var keyboardHeight: CGFloat? {
         get {
