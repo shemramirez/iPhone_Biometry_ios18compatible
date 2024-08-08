@@ -10,20 +10,18 @@ import LocalAuthentication
 
 class Authentication {
     
-    func getAuthenticationType() -> LABiometryType {
+    class func getAuthenticationType() -> LABiometryType {
         let context = LAContext()
         return context.biometryType
     }
     
-    func canEvaluateAuthentication() -> Bool {
+    class func canEvaluateAuthentication() -> Bool {
         let context = LAContext()
         var error: NSError?
         return context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
     }
     
-    func registerAuthentictaion() {
-        
+    class func registerAuthentictaion() {
+        // TODO: register 
     }
-    
-    
 }

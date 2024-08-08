@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let localAuthentication = Authentication()
 
     @IBOutlet weak var authenticationBtn: UIButton!
     
@@ -16,8 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        if localAuthentication.canEvaluateAuthentication() {
-            switch localAuthentication.getAuthenticationType() {
+        if Authentication.canEvaluateAuthentication() {
+            switch Authentication.getAuthenticationType() {
             case .faceID:
                 authenticationBtn.imageView?.image = UIImage(systemName: "faceid")
             case .touchID:

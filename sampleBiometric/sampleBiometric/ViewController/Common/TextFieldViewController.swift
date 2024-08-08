@@ -53,6 +53,7 @@ extension TextFieldViewController: UITextFieldDelegate {
     }
     
     @objc func keyboardWillShow(notification: Notification) {
+        //
     }
     
     @objc func keyboardWillHide(notification: Notification) {
@@ -67,10 +68,12 @@ extension TextFieldViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.activeTextField = textField
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         self.activeTextField = nil
     }
