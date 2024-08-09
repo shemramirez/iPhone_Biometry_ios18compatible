@@ -13,9 +13,28 @@ enum LoginType {
 }
 
 // TODO: Save Data
-class UserSaveData: Codable {
+class UserSaveData: Codable, Initiable {
     static let path = "UserSaveData.json"
 
     // var isLoggedIn: LoginType = .notLogin
     
+    required init() {
+    }
+    
+    public class var sharemanager: UserSaveData {
+        struct Instance {
+            static let singleInstance = UserSaveData.load()
+        }
+        return Instance.singleInstance
+    }
+    
+    func save() {
+        FileSave.save(self, UserSaveData.path)
+    }
+
+    // fileprivate since i want to sharedmanger
+    fileprivate static func load() -> UserSaveData {
+        let _sharedmanager: UserSaveData = FileSave.load(UserSaveData.path)
+        return _sharedmanager
+    }
 }

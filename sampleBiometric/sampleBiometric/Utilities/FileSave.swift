@@ -12,8 +12,11 @@ protocol Initiable {
 }
 
 class FileSave {
+    private init() {
+    }
     
-    static func load<T>(_ path: String) -> T? where T: Codable {
+    
+    static func load<T>(_ path: String) -> T! where T: Codable, T:Initiable {
         let destination = FileManager.SearchPathDirectory.cachesDirectory
         if let dir = FileManager.default.urls(for: destination, in: .userDomainMask).first {
             // returns the url
@@ -31,7 +34,7 @@ class FileSave {
         }
         
         // there no return
-        return nil
+        return T()
     }
     
     static func save<T>(_ object: T, _ path: String)where T: Codable, T: Initiable{
