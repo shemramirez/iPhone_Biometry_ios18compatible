@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func launchDelegate(_ window: UIWindow, _ components: NSURLComponents?) {
+        setupWindow()
+    }
+    func setupWindow() {
+        
+    }
 
     // MARK: UISceneSession Lifecycle
 
